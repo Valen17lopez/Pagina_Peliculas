@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="A">
+            <img class="logoA" src="./imagenes/Mi proyecto.png">
+            <h1>Cinematics</h1>
+        </div>
+      </div>
+      <div id="hea">
+  <a  class="active"href="../Pag_Peliculas/index.html">Menu Principal</a>
+  <a class="active" href="../Flim/peliculas.html">PELICULAS</a>
+  <a class="active" href="../Flim/series.html">SERIES</a>
+</div>
+    </header>
+
+     <!-- MENU -->
+    <nav>
+     <section>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+        .dropbtn {
+          background-color: #a50202c2;
+          color: white;
+          padding: 18px;
+          font-size: 16px;
+          border: none;
+          cursor: pointer;
+        }
+        
+        .dropbtn:hover, .dropbtn:focus {
+          background-color: #b72d2df4;
+        }
+        
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+        
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #fa7f7fe7;
+          min-width: 160px;
+          overflow: auto;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+        
+        .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+        
+        .dropdown a:hover {background-color: #ddd;}
+        
+        .show {display: block;}
+        </style>
+        <!-- </head>
+        <body style="background-color:white;"> -->
+        
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">Menu</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="terror">Terror</a>
+            <a href="comedia">Comedia</a>
+            <a href="romance">Romance</a>
+            <a href="suspenso">Suspenso</a>
+            <a href="drama">Drama</a>
+            <a href="fantansia">fantasia</a>
+          </div>
+        </div>
+        
+        <script>
+        /* Cuando el usuario hace clic en el botón,
+        alternar entre ocultar y mostrar el contenido desplegable */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        // Cierra el menú desplegable si el usuario hace clic fuera de él.
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+        </script>
+        </section>
+        <div class="bavin">
+          <section class="carrusel">
+            <img class="imgcar" src="./imagenes/terrifer.webp" alt="">
+            <img class="imgcar" src="./imagenes/365.jpg" alt="">
+            <img class="imgcar" src="./imagenes/Deadpool.png" alt="">
+            <img class="imgcar" src="./imagenes/demon.webp" alt="">
+            <img class="imgcar" src="./imagenes/lucifer.webp" alt="">
+          </section>
+        </div>
+      </nav>
+
+    <article>
+      <img class="imgA" src="./imagenes/op.jpg" >
+      <img class="imgA" src="./imagenes/castillo.jpg" >
+      <img class="imgA" src="./imagenes/crepusculo.jpg" >
+      <img class="imgA" src="./imagenes/harry.jpg" >
+      <img class="imgA" src="./imagenes/Greys_anathomy.jpg" >
+      <img class="imgA" src="./imagenes/stranger_things.jpg" >
+    </article>
+    <article>
+      <img class="imgA" src="./imagenes/yoantes.jpg" >
+      <img class="imgA" src="./imagenes/vertigo.jpg" >
+      <img class="imgA" src="./imagenes/Rapidos.jpg" >
+      <img class="imgA" src="./imagenes/la_mascara.jpg" >
+      <img class="imgA" src="./imagenes/standb.jpg" >
+      <img class="imgA" src="./imagenes/demo.jpg" >
+    </article>
+
+</div>
+</body>
+</html>

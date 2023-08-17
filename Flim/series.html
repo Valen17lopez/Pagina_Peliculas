@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="jquery-3.7.0.min.js"></script>
+    <title>Peliculas</title>
+</head>
+<body>
+    <header>
+        <div class="A">
+            <img class="logoA" src="../Flim/image/logoF.png">
+            <h1 id="cine">Cinematics</h1>
+        </div>
+        <div id="hea">
+            <a  class="active"href="../Pag_Peliculas/index.html">Menu Principal</a>
+            <a class="active" href="./peliculas.html">PELICULAS</a>
+            <a class="active" href="./series.html">SERIES</a>
+        </div>
+        <div id="bus">
+            <form action="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="Heading" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                    </svg>
+                <input class="form-control col-md-7" id="input_buscar" name="busqueda" style="margin:0px" type="search" placeholder="   Buscardor">
+            </form>
+        </div>
+        <script>
+            $(document).ready(function(){
+                $("#input_buscar").on("keyup", function() {
+                    var value = $(this).val().toLowerCase();
+                    $(".Pcaj").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                    });
+                });
+            });
+        </script>
+    </header>
+<!-- MENU -->
+    <nav>
+     <section>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">Menu</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="#" class="itemcategoria" category="all">Mostrar todo</a>
+                <a href="#" class="itemcategoria" category="terror">Terror</a>
+                <a href="#" class="itemcategoria" category="comedia">Comedia</a>
+                <a href="#" class="itemcategoria" category="romance">Romance</a>
+                <a href="#" class="itemcategoria" category="suspenso">Suspenso</a>
+                <a href="#" class="itemcategoria" category="drama">Drama</a>
+                <a href="#" class="itemcategoria" category="accion">Accion</a>
+                <a href="#" class="itemcategoria" category="fantasia">Fantasia</a>
+            </div>
+        </div>
+        <script>
+        /* Cuando el usuario hace clic en el botón,
+        alternar entre ocultar y mostrar el contenido desplegable */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        // Cierra el menú desplegable si el usuario hace clic fuera de él.
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+        </script>
+        
+        <section>
+            <div id="cajP1">
+                <div class="Pcaj" category="terror">
+                    <div class="contenedor-imagen" class="imagen-hover" >
+                    <img src="./imgS/ameri.jpg" alt="Imagen 1" class="imagen-hover">
+                    <p class="sip">American Horror Story  ‧ 11 Temporadas antología/horror</p>
+                    <button class="modal-button" data-modal="modal1">Mas+</button>
+                    <div class="modal-container" id="modal1">
+                        <div class="modal-content">
+                        <div class="mi">
+                            <p>Es una serie de antología que abarca una amplia variedad de temas y subgéneros dentro del horror. Cada temporada presenta una trama y personajes distintos, pero comparten una atmósfera de oscuridad, misterio y elementos sobrenaturales. La serie ha sido elogiada por su estilo visual distintivo y su enfoque en explorar los temores y las fobias humanas a través de historias impactantes y aterradoras.
+                            </p>
+                        </div>
+                        <iframe width="3000" height="350" src="https://www.youtube.com/embed/reP8VFF3KHU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>   
+                        <div class="ventana-flotante" id="ventana-flotante">
+                            <h2 class="par">Sinopsis</h2>
+                            <p class="par">American Horror Story: Murder House es la primera temporada de la serie de televisión de FX, American Horror Story, estrenada el 5 de octubre de 2011.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="Pcaj"  category="fantasia">
+                    <div class="contenedor-imagen">
+                    <img src="./imgS/Demon_slater.webp" alt="Imagen 2" class="imagen-hover">
+                    <p class="sip">Demon Slayer Serie de cómic ‧ 3 Temporadas Fantasía/Aventura</p>
+                    <button class="modal-button" data-modal="modal2">Mas+</button>
+                    <div class="modal-container" id="modal2">
+                        <div class="modal-content">
+                        <div class="mi">
+                            <p>Sigue la historia de Tanjiro Kamado, quien se convierte en Cazador de Demonios después de que su familia es asesinada por demonios y su hermana es convertida en uno. La serie se centra en su lucha por vengar a su familia y encontrar una cura para Nezuko mientras enfrenta desafíos sobrenaturales y desarrolla lazos emocionales con otros personajes.</p>
+                        </div>
+                        <iframe width="3000" height="350" src="https://www.youtube.com/embed/C_pKddExbXI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>   
+                        <div class="ventana-flotante">
+                            <h2 class="par">Sinopsis</h2>
+                            <p class="par">Kimetsu no Yaiba, también conocida  Demon Slayer, o en español Guardianes de la Noche es una serie de manga escrita e ilustrada por Koyoharu Gotōge.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="Pcaj" category="drama">
+                    <div class="contenedor-imagen">
+                    <img src="./imgS/gambito_de_dama.jpg" alt="Imagen 2" class="imagen-hover">
+                    <p class="sip">Gambito de dama Cine histórico ‧ 1 temporada</p>
+                    <button class="modal-button" data-modal="modal3">Mas+</button>
+                    <div class="modal-container" id="modal3">
+                            <div class="modal-content">
+                            <div class="mi">
+                                <p>Es una miniserie que sigue la vida de Elizabeth Harmon, una prodigiosa jugadora de ajedrez que lucha por superar desafíos personales y profesionales en una industria dominada por hombres. La serie combina elementos de ajedrez, drama y exploración emocional para crear una historia cautivadora sobre ambición, talento y redención.
+                                </p>
+                            </div>
+                            <iframe width="3000" height="350" src="https://www.youtube.com/embed/-BBgzgNgzeQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                        </div>   
+                        <div class="ventana-flotante">
+                            <h2 class="par">Sinopsis</h2>
+                            <p class="par">La huérfana y prodigio del ajedrez, Beth Harmon, lucha contra la adicción mientras busca convertirse en la mejor jugadora de ajedrez del mundo.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="Pcaj" category="drama">
+                    <div class="contenedor-imagen">
+                    <img src="./imgS/Greys_anathomy.jpg" alt="Imagen 1" class="imagen-hover">
+                    <p class="sip">Grey's Anatomy ‧ 19 temporadas Drama</p>
+                    <button class="modal-button" data-modal="modal4">Mas+</button>
+                    <div class="modal-container" id="modal4">
+                        <div class="modal-content">
+                        <div class="mi">
+                            <p>La serie se centra en la vida de los cirujanos internos, residentes y especialistas a medida de que se convierten en médicos cirujanos experimentados mientras tratan de equilibrar sus relaciones personales y profesionales. El título es una alusión a Gray's Anatomy, un libro de texto clásico sobre anatomía humana publicado por primera vez en 1858 en Londres y escrito por Henry Gray.</p>
+                        </div>
+                        <iframe width="3000" height="350" src="https://www.youtube.com/embed/w0mbpwCMsjU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>   
+                        <div class="ventana-flotante" id="ventana-flotante">
+                            <h2 class="par">Sinopsis</h2>
+                            <p class="par">Un drama que se enfoca en el personaje de Merdith Grey, una integrante de un grupo de doctores jóvenes en el hospital de Seattle. La hija de una famosa cirujana.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="Pcaj" category="suspenso">
+                    <div class="contenedor-imagen">
+                    <img src="./imgS/harry.jpg" alt="Imagen 1" class="imagen-hover">
+                    <p class="sip">Harry Potter Saga de películas ‧ 8 Peliculas</p>
+                    <button class="modal-button" data-modal="modal5">Mas+</button>
+                    <div class="modal-container" id="modal5">
+                            <div class="modal-content">
+                            <div class="mi">
+                                <p>La serie aborda temas de amistad, valentía, amor y la lucha entre el bien y el mal en un mundo mágico lleno de criaturas, hechizos y aventuras. A lo largo de los libros, los personajes crecen y enfrentan desafíos que los transforman, y la trama explora la importancia de la elección y la resiliencia</p>
+                            </div>
+                            <iframe width="3000" height="350" src="https://www.youtube.com/embed/ZgrCZVjPg9g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                        </div>   
+                        <div class="ventana-flotante" id="ventana-flotante">
+                            <h2 class="par">Sinopsis</h2>
+                            <p class="par">Traducción del inglés-Harry Potter es una serie de películas basada en las novelas homónimas de J. K. Rowling. La serie es producida y distribuida por Warner Bros.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="Pcaj" category="suspenso">
+                    <div class="contenedor-imagen">
+                    <img src="./imgS/la_casa_de_papel.jpg" alt="Imagen 1" class="imagen-hover">
+                    <p class="sip">La casa de papel ‧ 5 Temporadas Suspenso</p>
+                    <button class="modal-button" data-modal="modal6">Mas+</button>
+                    <div class="modal-container" id="modal6">
+                        <div class="modal-content">
+                        <div class="mi">
+                            <p> Se caracteriza por su intriga, giros inesperados, personajes carismáticos y emociones intensas. La serie explora temas de justicia, desigualdad social, moralidad y lealtad. A lo largo de sus temporadas, la trama se vuelve cada vez más compleja y lleva a los personajes a enfrentarse a dilemas éticos y personales.</p>
+                        </div>
+                        <iframe width="3000" height="350" src="https://www.youtube.com/embed/3y-6iaveY6c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>   
+                        <div class="ventana-flotante" id="ventana-flotante">
+                            <h2 class="par">Sinopsis</h2>
+                            <p class="par">Una banda organizada de ladrones se propone cometer el atraco del siglo en la Fábrica Nacional de Moneda y Timbre. Cinco meses de preparación quedarán reducidos a once días.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="Pcaj" category="suspenso">
+                    <div class="contenedor-imagen">
+                    <img src="./imgS/lucifer.webp" alt="Imagen 1" class="imagen-hover">
+                    <p class="sip">Lucifer ‧ 6 Temporadas Misterio</p>
+                    <button class="modal-button" data-modal="modal7">Mas+</button>
+                    <div class="modal-container" id="modal7">
+                        <div class="modal-content">
+                        <div class="mi">
+                            <p>Combina elementos de drama, comedia, crimen y fantasía sobrenatural. La serie se centra en la exploración de la naturaleza humana, las relaciones personales y el deseo de redención y cambio, mientras sigue las aventuras de Lucifer y su transformación a lo largo de las temporadas.</p>
+                        </div>
+                        <iframe width="3000" height="350" src="https://www.youtube.com/embed/X4bF_quwNtw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>   
+                        <div class="ventana-flotante" id="ventana-flotante">
+                            <h2 class="par">Sinopsis</h2>
+                            <p class="par">Harto del infierno, Lucifer abandona su trono en el averno y se marcha a Los Ángeles, donde empieza a trabajar como detective de homicidios.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="Pcaj" category="drama">
+                    <div class="contenedor-imagen">
+                    <img src="./imgS/sabrina.webp" alt="Imagen 1" class="imagen-hover">
+                    <p class="sip">El mundo oculto de Sabrina ‧ 4 Temporadas Drama</p>
+                    <button class="modal-button" data-modal="modal8">Mas+</button>
+                    <div class="modal-container" id="modal8">
+                        <div class="modal-content">
+                        <div class="mi">
+                            <p>Combina elementos de fantasía, horror, drama y romance. La serie explora temas de identidad, amistad, poder y el eterno conflicto entre el bien y el mal. A través de las temporadas, Sabrina y sus amigos luchan por encontrar su lugar en ambos mundos mientras enfrentan adversidades mágicas y personales.</p>
+                        </div>
+                        <iframe width="3000" height="350" src="https://www.youtube.com/embed/51fOujPcgIE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>   
+                        <div class="ventana-flotante" id="ventana-flotante">
+                            <h2 class="par">Sinopsis</h2>
+                            <p class="par">A medida que se acerca su cumpleaños número 16, Sabrina debe elegir entre el mundo de brujas de su familia y el mundo humano de sus amigos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="Pcaj" category="drama">
+                    <div class="contenedor-imagen">
+                    <img src="./imgS/stranger_things.jpg" alt="Imagen 1" class="imagen-hover">
+                    <p class="sip">Stranger Things ‧ 4 Temporadas Drama</p>
+                    <button class="modal-button" data-modal="modal9">Mas+</button>
+                    <div class="modal-container" id="modal9">
+                        <div class="modal-content">
+                        <div class="mi">
+                            <p>Es conocida por su homenaje a la cultura pop de los años 80, su atmósfera nostálgica y su equilibrio entre elementos de horror y ciencia ficción con lazos emocionales entre los personajes. Ambientada en marzo de 1986, ocho meses después de los eventos de la tercera temporada, la cuarta temporada se divide en diferentes tramas. La primera trama tiene lugar en Hawkins, donde varios adolescentes aparecen asesinados en extrañas circunstancias.</p>
+                        </div>
+                        <iframe width="3000" height="350" src="https://www.youtube.com/embed/d0JYlUTbv1A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>   
+                        <div class="ventana-flotante" id="ventana-flotante">
+                            <h2 class="par">Sinopsis</h2>
+                            <p class="par">Cuando un niño desaparece, sus amigos, la familia y la policía se ven envueltos en una serie de eventos misteriosos al tratar de encontrarlo.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="Pcaj" category="drama">
+                    <div class="contenedor-imagen">
+                    <img src="./imgS/SUITSPOSTER.webp" alt="Imagen 1" class="imagen-hover">
+                    <p class="sip">Suits ‧ 9 Temporadas Drama</p>
+                    <button class="modal-button" data-modal="modal10">Mas+</button>
+                    <div class="modal-container" id="modal10">
+                        <div class="modal-content">
+                        <div class="mi">
+                            <p> Se destaca por su enfoque en la dinámica de las relaciones profesionales y personales en un entorno legal competitivo. La serie combina elementos de drama legal con momentos de humor y relaciones interpersonales. Además de los casos legales y los desafíos éticos, la serie también se centra en el crecimiento y la evolución de los personajes mientras enfrentan sus propias debilidades y luchan por encontrar su lugar en el mundo de la abogacía.
+                            </p>
+                        </div>
+                        <iframe width="3000" height="350" src="https://www.youtube.com/embed/Ab2YIbP5xw8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>   
+                        <div class="ventana-flotante" id="ventana-flotante">
+                            <h2 class="par">Sinopsis</h2>
+                            <p class="par">El gran abogado corporativo de Manhattan, Harvey Specter y su equipo, Donna Paulsen, Louis Litt y Alex Williams, se lanzan a un juego por obtener el poder.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="Pcaj" category="romance">
+                    <div class="contenedor-imagen">
+                    <img src="./imgS/vamp.jpg" alt="Imagen 1" class="imagen-hover">
+                    <p class="sip">The Vampire Diaries ‧ 8 Temporadas Misterio</p>
+                    <button class="modal-button" data-modal="modal11">Mas+</button>
+                    <div class="modal-container" id="modal11">
+                        <div class="modal-content">
+                        <div class="mi">
+                            <p>Pocos meses después de que sus padres fallecieron en un accidente automovilístico, Elena Gilbert y su hermano, Jeremy tratan de mitigar la pena de su pérdida. Para Elena, una chica que fue muy popular y que está involucrada en su colegio y con sus amigos, le es difícil esconder su tristeza de los demás. Ella se encuentra extasiada con un nuevo estudiante apuesto y misterioso, Stefan, desconociendo que él es un vampiro de varios siglos de edad que está tratando de hacer lo mejor para vivir en paz junto a los humanos.</p>
+                        </div>
+                        <iframe width="3000" height="350" src="https://www.youtube.com/embed/K3xlHP3LOr8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>   
+                        <div class="ventana-flotante" id="ventana-flotante">
+                            <h2 class="par">Sinopsis</h2>
+                            <p class="par">Pocos meses después de que sus padres fallecieron en un accidente automovilístico, Elena Gilbert y su hermano, Jeremy tratan de mitigar la pena de su pérdida.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="Pcaj" category="terror">
+                    <div class="contenedor-imagen">
+                    <img src="./imgS/walking.jpg" alt="Imagen 1" class="imagen-hover">
+                    <p class="sip">The Walking Dead ‧ 11 Temporadas Terror</p>
+                    <button class="modal-button" data-modal="modal12">Mas+</button>
+                    <div class="modal-container" id="modal12">
+                        <div class="modal-content">
+                        <div class="mi">
+                            <p> Combina el horror de los zombis con el drama humano, explorando cómo los personajes luchan por mantener su humanidad y sobrevivir en un mundo desolado. La serie aborda temas de lealtad, moralidad, sacrificio y las complejidades de las relaciones interpersonales en un entorno apocalíptico.</p>
+                        </div>
+                        <iframe width="3000" height="350" src="https://www.youtube.com/embed/sfAc2U20uyg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>   
+                        <div class="ventana-flotante" id="ventana-flotante">
+                            <h2 class="par">Sinopsis</h2>
+                            <p class="par">Basado en la historieta escrita por Robert Kirkman, este drama crudo describe las vidas de un grupo de sobrevivientes que está siempre en movimiento en busca de un hogar.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="Pcaj" category="drama">
+                    <div class="contenedor-imagen">
+                    <img src="./imgS/anne.jpg" alt="Imagen 1" class="imagen-hover">
+                    <p class="sip">Anne with an E ‧ 3 Temporadas Cine histórico </p>
+                    <button class="modal-button" data-modal="modal13">Mas+</button>
+                    <div class="modal-container" id="modal13">
+                        <div class="modal-content">
+                        <div class="mi">
+                            <p>La serie sigue las aventuras y la vida de Anne Shirley, una imaginativa y enérgica niña huérfana que es enviada por error a vivir con los hermanos Cuthbert, Marilla y Matthew, en su granja Green Gables en Avonlea, Canadá, a finales del siglo XIX.</p>
+                        </div>
+                        <iframe width="3000" height="350" src="https://www.youtube.com/embed/M4T-_aB8smU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>   
+                        <div class="ventana-flotante" id="ventana-flotante">
+                            <h2 class="par">Sinopsis</h2>
+                            <p class="par">En la década de 1890, una niña huérfana de 13 años es enviada por error a vivir con hermanos mayores a la Isla del Príncipe Eduardo.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="Pcaj" category="drama">
+                    <div class="contenedor-imagen">
+                    <img src="./imgS/breaki.jpg" alt="Imagen 1" class="imagen-hover">
+                    <p class="sip">Breaking Bad ‧ 5 Temporadas Drama</p>
+                    <button class="modal-button" data-modal="modal14">Mas+</button>
+                    <div class="modal-container" id="modal14">
+                        <div class="modal-content">
+                        <div class="mi">
+                            <p> Es conocida por su exploración profunda de la moralidad, la transformación de los personajes y su estudio detallado de las consecuencias de las acciones. La serie muestra cómo las decisiones de Walter lo llevan por un camino peligroso y destructivo.</p>
+                        </div>
+                        <iframe width="3000" height="350" src="https://www.youtube.com/embed/Bi3mMWw_cJ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>   
+                        <div class="ventana-flotante" id="ventana-flotante">
+                            <h2 class="par">Sinopsis</h2>
+                            <p class="par">El profesor calmado de química de una secundaria, Walter White cree que su vida no puede ser peor. Su salario apenas le alcanza para sostener a su familia.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="Pcaj" category="drama">
+                    <div class="contenedor-imagen">
+                    <img src="./imgS/sla.jpg" alt="Imagen 1" class="imagen-hover">
+                    <p class="sip">Slasher ‧ 5 Temporadas Drama</p>
+                    <button class="modal-button" data-modal="modal15">Mas+</button>
+                    <div class="modal-container" id="modal15">
+                        <div class="modal-content">
+                        <div class="mi">
+                            <p>Ofrece una historia independiente de horror y misterio, explorando temas oscuros y revelando secretos ocultos mientras los personajes luchan por su vida. La serie es conocida por sus giros inesperados y su enfoque en los elementos clásicos del género de terror.</p>
+                        </div>
+                        <iframe width="3000" height="350" src="https://www.youtube.com/embed/ZIqX4A-XT-Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>   
+                        <div class="ventana-flotante" id="ventana-flotante">
+                            <h2 class="par">Sinopsis</h2>
+                            <p class="par">Sarah Bennett regresa al pequeño pueblo en el que nació para encontrarse en el centro de horribles asesinatos. Cuando estos crímenes comienzan a escalar en sospechosos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="Pcaj" category="drama">
+                    <div class="contenedor-imagen" class="imagen-hover" >
+                    <img src="./imgS/bett.jpg" alt="Imagen 1" class="imagen-hover">
+                    <p class="sip">Better Call Sau ‧ 6 temporadas Drama</p>
+                    <button class="modal-button" data-modal="modal16">Mas+</button>
+                    <div class="modal-container" id="modal16">
+                        <div class="modal-content">
+                        <div class="mi">
+                            <p>Ambientada entre principios y mediados de la década de 2000, la serie sigue la historia de Jimmy McGill, un estafador convertido en abogado y que posteriormente sería conocido como Saul Goodman. La narración comienza seis años antes de los eventos de Breaking Bad y muestra la transformación de McGill de ex-estafador de poca monta hasta convertirse en el abogado Saul Goodman, uno de los personajes principales de Breaking Bad.</p>
+                        </div>
+                        <iframe width="3000" height="350" src="https://www.youtube.com/embed/HN4oydykJFc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>   
+                        <div class="ventana-flotante" id="ventana-flotante">
+                            <h2 class="par">Sinopsis</h2>
+                            <p class="par">Seis años antes de conocer a Walter White, el cuestionable abogado Jimmy McGill asume el alias de Saul Goodman, mientras intenta labrarse un nombre propio en Albuquerque.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="Pcaj" category="accion">
+                    <div class="contenedor-imagen" class="imagen-hover" >
+                    <img src="./imgS/7peca.jpg" alt="Imagen 1" class="imagen-hover">
+                    <p class="sip">The Seven Deadly Sins ‧ 5 Temporadas Anime</p>
+                    <button class="modal-button" data-modal="modal17">Mas+</button>
+                    <div class="modal-container" id="modal17">
+                        <div class="modal-content">
+                        <div class="mi">
+                            <p>La trama principal se sitúa en una época medieval y sigue las aventuras del escuadrón de caballeros conocidos como los "siete pecados capitales" (que actúan como protectores de Britannia), para defenderla de la opresión, y al mismo tiempo buscan la redención por pecados que les confirieron sus títulos.Una adaptación de dos temporadas de anime por parte del estudio A-1 Pictures se emitió desde 2014 al 2018.</p>
+                        </div>
+                        <iframe width="3000" height="350" src="https://www.youtube.com/embed/6ribjsdOeM8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>   
+                        <div class="ventana-flotante" id="ventana-flotante">
+                            <h2 class="par">Sinopsis</h2>
+                            <p class="par">Los Siete Pecados Mortales viajan al Templo del Cielo en busca de un ingrediente y se unen a la lucha contra un poderoso grupo de demonios.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="Pcaj" category="suspenso">
+                    <div class="contenedor-imagen" class="imagen-hover" >
+                    <img src="./imgS/shoo.jpg" alt="Imagen 1" class="imagen-hover">
+                    <p class="sip">Shooter ‧ 3 temporadas Suspenso</p>
+                    <button class="modal-button" data-modal="modal18">Mas+</button>
+                    <div class="modal-container" id="modal18">
+                        <div class="modal-content">
+                        <div class="mi">
+                            <p>Shooter es una serie dramática de televisión estadounidense, basada en la novela Point of Impact por Stephen Hunter, y la película del mismo nombre de 2007. La trama se centra en un tirador estadounidense entrenado en contrainteligencia y en el funcionamiento del gobierno EE. UU.</p>
+                        </div>
+                        <iframe width="3000" height="350" src="https://www.youtube.com/embed/pAEXOttWpck" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>   
+                        <div class="ventana-flotante" id="ventana-flotante">
+                            <h2 class="par">Sinopsis</h2>
+                            <p class="par">El francotirador Bob Lee Swagger debe evitar un complot contra el presidente de los Estados Unidos. Isaac Johnson, un exmarine y ahora agente del Servicio Secreto.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+     <section>
+        <script src="flo.js"></script>     
+    </section>
+</body>
+</html>

@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(./imagenes/fondo.jpg);
+    background-size: cover;
+}
+header {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+}
+header a:hover{
+    color: rgb(247, 234, 250);
+    background-color: rgb(255, 0, 30);
+    border-radius: 20px ;
+    width: 40%;
+    text-align: center; 
+}
+.A {
+    display: flex;
+    width: 32%;
+    color: #fff;
+}
+#hea {
+    display: flex;
+    justify-content: space-around;
+    width: 35%;
+    margin: 0% 6% 0% 0%;
+}
+h1 {
+    margin: 5% 8%;
+    font-size: 42px;
+}
+.al{
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+    list-style: none;
+    
+}
+#especial{
+    border-radius: 5px;
+    background: rgba(203, 8, 8, 0.831);
+    height: 30px;
+    width: 160px;
+    padding: 12px 10px;
+}
+#especial:hover{
+    background:rgba(236, 114, 114, 0.871);
+    transition: .2s;
+    padding: 12px;
+}
+a{
+    background-color: transparent;
+    border: none;
+    color: aliceblue;
+    font-size: 20px;
+    text-decoration: none;
+}
+.logoA {
+    width: 28%;
+    height: 100px;
+    border-radius: 56%;
+}
+section {
+    margin: 1% 0% 0% 2%;
+    width: 100px;
+}
+
+.carrusel {
+    display: flex;
+    width: 80%;
+    height: 500px;
+    align-items: center;
+    justify-content: center
+}
+
+.bavin{
+    display: flex;
+    justify-content:center;
+    width: 100%;
+}
+.carrusel img {
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5S EASE;
+
+}
+.carrusel img:hover{
+    width: 150px;
+    opacity: 1;
+    filter: contrast(120%);
+    box-shadow: 2px 3px 30px rgba(255, 255, 255, 0.934);
+    transform: translateY(-7px);
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
+article {
+    display: flex;
+    justify-content: space-around;
+    padding: 5% 0% 1% 0%;
+    flex-wrap: wrap;
+}
+.imgA {
+    width: 190px;
+    border: solid rgb(212, 42, 42);
+    box-shadow: 2px 4px 16px rgb(217, 86, 86);
+}
+
+.videoT{
+    width: 50%;
+    height:500px
+}

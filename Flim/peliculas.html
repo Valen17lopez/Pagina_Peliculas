@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="jquery-3.7.0.min.js"></script>
+    <title>Peliculas</title>
+</head>
+<body>
+    <header>
+        <div class="A">
+            <img class="logoA" src="../Flim/image/logoF.png">
+            <h1 id="cine">Cinematics</h1>
+</body>
+</html>
+
+        </div>
+        <div id="hea">
+            <a  class="active"href="../Pag_Peliculas/index.html">Menu Principal</a>
+            <a class="active" href="./peliculas.html">PELICULAS</a>
+            <a class="active" href="./series.html">SERIES</a>
+        </div>
+        <div id="bus">
+            <form action="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="Heading" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                    </svg>
+                <input class="form-control col-md-7" id="input_buscar" name="busqueda" style="margin:0px" type="search" placeholder="   Buscardor">
+            </form>
+        </div>
+        <script>
+            $(document).ready(function(){
+                $("#input_buscar").on("keyup", function() {
+                    var value = $(this).val().toLowerCase();
+                    $(".Pcaj").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                    });
+                });
+            });
+        </script>
+    </header>
+<!-- MENU -->
+    <nav>
+     <section>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">Menu</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="#" class="itemcategoria" category="all">mostrar todo</a>
+            <a href="#" class="itemcategoria" category="terror">Terror</a>
+            <a href="#" class="itemcategoria" category="comedia">Comedia</a>
+            <a href="#" class="itemcategoria" category="Romance">Romance</a>
+            <a href="#" class="itemcategoria" category="suspenso">Suspenso</a>
+            <a href="#" class="itemcategoria" category="drama">Drama</a>
+            <a href="#" class="itemcategoria" category="accion">Accion</a>
+            <a href="#" class="itemcategoria" category="fantasia">fantasia</a>
+            </div>
+        </div>
+        <script>
+        /* Cuando el usuario hace clic en el botón,
+        alternar entre ocultar y mostrar el contenido desplegable */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        // Cierra el menú desplegable si el usuario hace clic fuera de él.
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+        </script>
+        
+        <section>
+            <div id="cajP1">
+               <div class="Pcaj" category="Romance">
+                    <div class="contenedor-imagen" class="imagen-hover" >
+                    <img src="./imgP/50.jpg" alt="Imagen 1" class="imagen-hover">
+                    <p class="sip">Cincuenta Sombras 2018 ‧ Serie de Peliculas</p>
+                    <button class="modal-button" data-modal="modal1">Mas+</button>
+                    <div class="modal-container" id="modal1">
+                            <div class="modal-content">
+                            <div class="mi">
+                                <p>Cincuenta sombras es una serie de películas de drama romántico-erótico, basadas en la trilogía Cincuenta sombras de Grey de la autora inglesa E. L. James. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus tenetur sunt alias recusandae velit laboriosam, nobis cumque perspiciatis aliquam tempore odit. Ipsam, ullam fugit ipsum maxime ex commodi quo laboriosam?</p>
+                            </div>
+                            <iframe width="3000" height="350" src="https://www.youtube.com/embed/AxQaNa2mYZA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                        </div>                              
+                        <div class="ventana-flotante" id="ventana-flotante">
+                            <h2 class="par">Sinopsis</h2>
+                            <p class="par">Cincuenta sombras es una serie de películas de drama romántico-erótico, basadas en la trilogía Cincuenta sombras de Grey de la autora inglesa E. L. James.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="Pcaj" category="fantasia">
+                    <div class="contenedor-imagen">
+                    <img src="./imgP/alicia.jpg" alt="Imagen 2" class="imagen-hover">
+                    <p class="sip">Alicia en el país de las maravillas 2010 ‧ Fantasía/Aventura</p>
+                    <button class="modal-button" data-modal="modal2">Mas+</button>
+                    <div class="modal-container" id="modal2">
+                        <div class="modal-content">
+                            <div class="mi">
+                                <p>"Alicia en el País de las Maravillas" 
+                                    Sigue las aventuras de una niña en un mundo ilógico y surrealista. A través de sus encuentros y desafíos, la historia reflexiona sobre la naturaleza de la realidad y la imaginación, y cuestiona las reglas y convenciones sociales.</p>
+                            </div>
+                            <iframe width="2050" height="350" src="https://www.youtube.com/embed/Gyu7zvy8leg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                        </div>     
+                        <div class="ventana-flotante">
+                            <h2 class="par">Sinopsis</h2>
+                            <p class="par">Alicia, ahora una joven de 19 años de edad, regresa al País de las Maravillas para encontrar su verdadero destino y terminar con el gobierno de terror de la malvada reina Roja.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="Pcaj" category="terror">
+                    <div class="contenedor-imagen">
+                    <img src="./imgP/asi_en_la_tierra_como_en_el_infierno.jpg" alt="Imagen 2" class="imagen-hover">
+                    <p class="sip">Así en La Tierra Como en El Infierno 2014 ‧ Terror/Suspenso</p>
+                    <button class="modal-button" data-modal="modal3">Mas+</button>
+                    <div class="modal-container" id="modal3">
+                        <div class="modal-content">
+                        <div class="mi">
+                            <p>"Así en la Tierra como en el Infierno"
+                                sigue a un grupo de exploradores urbanos que se aventuran en las catacumbas de París en busca de una piedra filosofal y se encuentran atrapados en un mundo de horrores sobrenaturales y terror psicológico. La película explora temas de obsesión, culpa y los límites de la realidad en un ambiente oscuro y claustrofóbico.
+                               </p>
+                        </div>
+                        <iframe width="3000" height="350" src="https://www.youtube.com/embed/QfNSlNzXj4w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>     
+                        <div class="ventana-flotante">
+                            <h2 class="par">Sinopsis</h2>
+                            <p class="par">Kilómetros y kilómetros de tortuosas catacumbas yacen bajo las calles de París, plagadas de incontables almas. Cuando un equipo de exploradores se aventura en este</p>
+                        </div>
+                    </div>
+                </div>
+                 <div class="Pcaj" category="fantasia">
+                    <div class="contenedor-imagen">
+                    <img src="./imgP/avatar.jpg" alt="Imagen 1" class="imagen-hover">
+                    <p class="sip">Avatar 2 2022 ‧ Ciencia ficción/Acción</p>
+                    <button class="modal-button" data-modal="modal4">Mas+</button>
+                    <div class="modal-container" id="modal4">
+                            <div class="modal-content">
+                            <div class="mi">
+                                <p>Avatar 2
+                                    Jake y Neytiri tienen una familia en esta película, son obligados a abandonar su hogar, así que salen al exterior y exploran diferentes regiones de Pandora, pasando un tiempo en el agua, alrededor del agua, sobre el agua...</p>
+                            </div>
+                            <iframe width="3000" height="350" src="https://www.youtube.com/embed/FSyWAxUg3Go" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                        </div>     
+                        <div class="ventana-flotante" id="ventana-flotante">
+                            <h2 class="par">Sinopsis</h2>
+                            <p class="par">Jake Sully y Ney'tiri han formado una familia y hacen todo lo posible por permanecer juntos. Sin embargo, deben abandonar su hogar y explorar las regiones</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="Pcaj" category="drama">
+                    <div class="contenedor-imagen">
+                    <img src="./imgP/barbie.jpg" alt="Imagen 1" class="imagen-hover">
+                    <p class="sip">Barbie 2023 ‧ Comedia/Drama</p>
+                    <button class="modal-button" data-modal="modal5">Mas+</button>
+                    <div class="modal-container" id="modal5">
+                        <div class="modal-content">
+                        <div class="mi">
+                            <p>Barbie 
+                                Después de ser expulsada de Barbieland por no ser una muñeca de aspecto perfecto, Barbie parte hacia el mundo humano para encontrar la verdadera felicidad.</p>
+                        </div>
+                        <iframe width="3000" height="350" src="https://www.youtube.com/embed/zh4KhVSMwtQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>     
+                        <div class="ventana-flotante" id="ventana-flotante">
+                            <h2 class="par">Sinopsis</h2>
+                            <p class="par">Después de ser expulsada de Barbieland por no ser una muñeca de aspecto perfecto, Barbie parte hacia el mundo humano para encontrar la verdadera felicidad.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="Pcaj" category="Romance">
+                    <div class="contenedor-imagen">
+                    <img src="./imgP/castillo.jpg" alt="Imagen 1" class="imagen-hover">
+                    <p class="sip">El increíble castillo vagabundo 2004 ‧ Fantasía/Infantil</p>
+                    <button class="modal-button" data-modal="modal6">Mas+</button>
+                    <div class="modal-container" id="modal6">
+                            <div class="modal-content">
+                            <div class="mi">
+                                <p>"El Increíble Castillo Vagabundo" 
+                                    Es una película de animación que sigue la historia de Sophie, una joven que es transformada en una anciana por un hechizo, y su aventura en el Castillo Vagabundo junto a Howl, Calcifer y Markl. La película mezcla elementos de fantasía, romance y aventura mientras aborda temas emocionales y personales.</p>
+                            </div>
+                            <iframe width="3000" height="350" src="https://www.youtube.com/embed/BCDEOoNYW18" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                        </div>     
+                        <div class="ventana-flotante" id="ventana-flotante">
+                            <h2 class="par">Sinopsis</h2>
+                            <p class="par">Después de que una bruja (Lauren Bacall) la transforma en una anciana, una fabricante (Jean Simmons) de sombreros busca refugio en la casa ambulante de un singular mago (Christian Bale).</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="Pcaj" category="fantasia">
+                    <div class="contenedor-imagen">
+                    <img src="./imgP/chi.jpg" alt="Imagen 1" class="imagen-hover">
+                    <p class="sip">El viaje de Chihiro 2001 ‧ Fantasía/Aventura</p>
+                    <button class="modal-button" data-modal="modal7">Mas+</button>
+                    <div class="modal-container" id="modal7">
+                        <div class="modal-content">
+                        <div class="mi">
+                            <p>"El Viaje de Chihiro" 
+                                Sigue las aventuras y desafíos de una niña llamada Chihiro en un mundo mágico y sobrenatural. La película combina elementos de fantasía, aventura y crecimiento personal mientras Chihiro enfrenta pruebas y descubre su propia valentía y determinación.</p>
+                        </div>
+                        <iframe width="3000" height="350" src="https://www.youtube.com/embed/5Fgq4Osh6XQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>     
+                        <div class="ventana-flotante" id="ventana-flotante">
+                            <h2 class="par">Sinopsis</h2>
+                            <p class="par">Chihiro es una niña caprichosa que debe adentrarse en un mundo de fantasía para poder salvar a sus padres, convertidos en cerdos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="Pcaj" category="Romance">
+                    <div class="contenedor-imagen">
+                    <img src="./imgP/crepusculo.jpg" alt="Imagen 1" class="imagen-hover">
+                    <p class="sip">Crepúsculo 2008 ‧ Serie de películas</p>
+                    <button class="modal-button" data-modal="modal8">Mas+</button>
+                    <div class="modal-container" id="modal8">
+                            <div class="modal-content">
+                            <div class="mi">
+                                <p>"Crepúsculo" 
+                                    Es el comienzo de una serie de novelas y películas que narran el romance entre una humana y un vampiro, y cómo ambos se enfrentan a las complejidades de su relación en medio de un mundo sobrenatural. La historia combina elementos de romance, fantasía y acción mientras exploran temas de amor, identidad y dilemas morales.</p>
+                            </div>
+                            <iframe width="3000" height="350" src="https://www.youtube.com/embed/6UTwp0Qv_Sg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                        </div>     
+                        <div class="ventana-flotante" id="ventana-flotante">
+                            <h2 class="par">Sinopsis</h2>
+                            <p class="par">Crepúsculo: la saga es una serie de cinco películas de fantasía romántica de Summit Entertainment, basada en las cuatro novelas de la autora estadounidense Stephenie Meyer. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="Pcaj" category="accion">
+                    <div class="contenedor-imagen">
+                    <img src="./imgP/Deadpool.png" alt="Imagen 1" class="imagen-hover">
+                    <p class="sip">Deadpool 2016 ‧ Acción/Aventura</p>
+                    <button class="modal-button" data-modal="modal9">Mas+</button>
+                    <div class="modal-container" id="modal9">
+                        <div class="modal-content">
+                        <div class="mi">
+                            <p>"Deadpool"
+                                Narra la historia de un exmercenario desfigurado que se convierte en el antihéroe Deadpool y busca venganza contra el hombre que lo transformó. La película combina acción, humor, violencia y elementos únicos de la personalidad del protagonista para ofrecer una experiencia de superhéroes diferente y entretenida.</p>
+                        </div>
+                        <iframe width="3000" height="350" src="https://www.youtube.com/embed/0JnRdfiUMa8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>     
+                        <div class="ventana-flotante" id="ventana-flotante">
+                            <h2 class="par">Sinopsis</h2>
+                            <p class="par">Un exmercenario quien, tras haber sido sometido a un cruel experimento, adquiere el superpoder de sanar rápidamente y pretende vengarse del hombre que destrozó su vida.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="Pcaj" category="terror">
+                    <div class="contenedor-imagen">
+                    <img src="./imgP/demo.jpg" alt="Imagen 1" class="imagen-hover">
+                    <p class="sip">La noche del demonio: La puerta roja 2023 ‧ Terror/Misterio</p>
+                    <button class="modal-button" data-modal="modal10">Mas+</button>
+                    <div class="modal-container" id="modal10">
+                            <div class="modal-content">
+                            <div class="mi">
+                                <p>"La Noche del Demonio" 
+Es una película de terror que sigue a una familia atormentada por eventos paranormales después de mudarse a una nueva casa. La película mezcla elementos de posesión, fenómenos sobrenaturales y suspense para crear una atmósfera aterradora. A medida que la trama se desarrolla, la familia debe luchar contra fuerzas oscuras y desconocidas para proteger a su hijo y desentrañar los secretos del mundo espiritual.</p>
+                            </div>
+                            <iframe width="3000" height="350" src="https://www.youtube.com/embed/ujpQGz3MBfU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                        </div>     
+                        <div class="ventana-flotante" id="ventana-flotante">
+                            <h2 class="par">Sinopsis</h2>
+                            <p class="par">Nueve años después, Josh y Renai se han divorciado, Lorraine ha fallecido y Dalton ha ingresado en la universidad. Allí, los demonios del pasado </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="Pcaj" category="terror">
+                    <div class="contenedor-imagen">
+                    <img src="./imgP/it.webp" alt="Imagen 1" class="imagen-hover">
+                    <p class="sip">Eso 2019 ‧ Serie de películas</p>
+                    <button class="modal-button" data-modal="modal11">Mas+</button>
+                    <div class="modal-container" id="modal11">
+                            <div class="modal-content">
+                            <div class="mi">
+                                <p>"It" 
+                                    Sigue las luchas de un grupo de niños y adultos contra el malvado ser conocido como Pennywise. La historia combina elementos de terror sobrenatural con exploración de los traumas y miedos personales de los personajes, y cómo la amistad y el valor los ayudan a superarlos.</p>
+                            </div>
+                            <iframe width="3000" height="350" src="https://www.youtube.com/embed/o1sQbtZpsic" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                        </div>     
+                        <div class="ventana-flotante" id="ventana-flotante">
+                            <h2 class="par">Sinopsis</h2>
+                            <p class="par">Varios niños de una pequeña ciudad del estado de Maine se alían para combatir a una entidad diabólica que adopta la forma de un payaso y desde hace mucho tiempo emerge </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="Pcaj" category="fantasia">
+                    <div class="contenedor-imagen">
+                    <img src="./imgP/mario.jpg" alt="Imagen 1" class="imagen-hover">
+                    <p class="sip">Super Mario Bros 2023 ‧ Aventura/Comedia</p>
+                    <button class="modal-button" data-modal="modal12">Mas+</button>
+                    <div class="modal-container" id="modal12">
+                            <div class="modal-content">
+                            <div class="mi">
+                                <p>“Super Mario Bros.: La película”
+                                    Basada en el mundo de los juegos de Mario de Nintendo, la película invita al público a un nuevo universo vibrante y emocionante como nunca antes se había creado en un evento de comedia cinematográfica exuberante y lleno de acción.</p>
+                            </div>
+                            <iframe width="3000" height="350" src="https://www.youtube.com/embed/SvJwEiy2Wok" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                        </div>     
+                        <div class="ventana-flotante" id="ventana-flotante">
+                            <h2 class="par">Sinopsis</h2>
+                            <p class="par">Dos hermanos plomeros, Mario y Luigi, caen por las alcantarillas y llegan a un mundo subterráneo mágico en el que deben enfrentarse al malvado Bowser para</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="Pcaj" category="drama">
+                    <div class="contenedor-imagen">
+                    <img src="./imgP/op.jpg" alt="Imagen 1" class="imagen-hover">
+                    <p class="sip">Oppenheimer 2023 ‧ Drama/Suspenso</p>
+                    <button class="modal-button" data-modal="modal13">Mas+</button>
+                    <div class="modal-container" id="modal13">
+                            <div class="modal-content">
+                            <div class="mi">
+                                <p>“Super Mario Bros.: La película”
+                                    Basada en el mundo de los juegos de Mario de Nintendo, la película invita al público a un nuevo universo vibrante y emocionante como nunca antes se había creado en un evento de comedia cinematográfica exuberante y lleno de acción.</p>
+                            </div>
+                            <iframe width="3000" height="350" src="https://www.youtube.com/embed/yLYbOe914ZU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                            
+                        </div>     
+                        <div class="ventana-flotante" id="ventana-flotante">
+                            <h2 class="par">Sinopsis</h2>
+                            <p class="par">El físico J Robert Oppenheimer trabaja con un equipo de científicos durante el Proyecto Manhattan, que condujo al desarrollo de la bomba atómica.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="Pcaj" category="drama">
+                    <div class="contenedor-imagen">
+                    <img src="./imgP/no_se_aceptan_devoluciones.jpg" alt="Imagen 1" class="imagen-hover">
+                    <p class="sip">No se aceptan devoluciones 2013 ‧ Comedia/Drama</p>
+                    <button class="modal-button" data-modal="modal14">Mas+</button>
+                    <div class="modal-container" id="modal14">
+                            <div class="modal-content">
+                            <div class="mi">
+                                <p>"No se aceptan devoluciones" 
+                                    narra la transformación de un hombre irresponsable en un padre amoroso y comprometido, a medida que enfrenta los desafíos de la paternidad y se conecta emocionalmente con su hija. La película ofrece una mezcla de emociones, desde momentos tiernos hasta situaciones humorísticas, mientras aborda temas profundos relacionados con la familia y el amor incondicional.
+                                    </p>
+                            </div>
+                            <iframe width="3000" height="350" src="https://www.youtube.com/embed/yTvyNBtrOY4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                        </div>     
+                        <div class="ventana-flotante" id="ventana-flotante">
+                            <h2 class="par">Sinopsis</h2>
+                            <p class="par">Valentín es el soltero más mujeriego de Acapulco. Un día, una mujer de su pasado deja un bebé en su puerta y desaparece. Valentín decide ir a Los Ángeles en su búsqueda</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="Pcaj" category="suspenso">
+                    <div class="contenedor-imagen">
+                    <img src="./imgP/viaje.jpg" alt="Imagen 1" class="imagen-hover">
+                    <p class="sip">Una aventura extraordinaria 2012 ‧ Aventura/Drama</p>
+                    <button class="modal-button" data-modal="modal15">Mas+</button>
+                    <div class="modal-container" id="modal15">
+                            <div class="modal-content">
+                            <div class="mi">
+                                <p>"La vida de Pi " 
+                                    Explora temas como la supervivencia, la relación entre humanos y animales, la espiritualidad y la interpretación de la realidad. La narrativa juega con la idea de la verdad subjetiva y cómo la percepción de los eventos puede variar según quién los cuente. La película y la novela dejan espacio para múltiples interpretaciones y reflexiones sobre la naturaleza humana y nuestra conexión con el mundo natural.</p>
+                            </div>
+                            <iframe width="3000" height="350" src="https://www.youtube.com/embed/gbGBK-wLtO8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                        </div>     
+                        <div class="ventana-flotante" id="ventana-flotante">
+                            <h2 class="par">Sinopsis</h2>
+                            <p class="par">Después de decidir vender su zoológico en la India y mudarse a Canadá, Santosh y Gita Patel viajan en un barco carguero con sus hijos y algunos animales. Una terrible tormenta</p>
+                        </div>
+                    </div>
+                </div> 
+                <div class="Pcaj" category="Romance">
+                    <div class="contenedor-imagen">
+                    <img src="./imgP/yoantes.jpg" alt="Imagen 1" class="imagen-hover">
+                    <p class="sip">Yo antes de ti ‧ Romance/Drama</p>
+                    <button class="modal-button" data-modal="modal16">Mas+</button>
+                    <div class="modal-container" id="modal16">
+                        <div class="modal-content">
+                        <div class="mi">
+                            <p>Cincuenta  serie de películas de drama romántico-erótico, basadas en la trilogía Cincuenta sombras de Grey de la autora inglesa E. L. James. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus tenetur sunt alias recusandae velit laboriosam, nobis cumque perspiciatis aliquam tempore odit. Ipsam, ullam fugit ipsum maxime ex commodi quo laboriosam?</p>
+                        </div>
+                        <iframe width="3000" height="350" src="https://www.youtube.com/embed/IoQPUqvcmXY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                        <div class="ventana-flotante" id="ventana-flotante">
+                            <h2 class="par">Sinopsis</h2>
+                            <p class="par">La vida de Louisa Clark, una chica alegre y alocada, que va empalmando un trabajo con otro para ayudar a su familia a subsistir, cambia por completo cuando comienza </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="Pcaj" category="Romance">
+                    <div class="contenedor-imagen">
+                    <img src="./imgP/standb.jpg" alt="Imagen 1" class="imagen-hover">
+                    <p class="sip">Stand de los besos ‧ Romance/Drama</p>
+                    <button class="modal-button" data-modal="modal17">Mas+</button>
+                    <div class="modal-container" id="modal17">
+                        <div class="modal-content">
+                        <div class="mi">
+                            <p>Cincuenta sombras es una serie de películas de drama romántico-erótico, basadas en la trilogía Cincuenta sombras de Grey de la autora inglesa E. L. James. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus tenetur sunt alias recusandae velit laboriosam, nobis cumque perspiciatis aliquam tempore odit. Ipsam, ullam fugit ipsum maxime ex commodi quo laboriosam?</p>
+                        </div>
+                        <iframe width="3000" height="350" src="https://www.youtube.com/embed/L5nYYBxg52A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                        <div class="ventana-flotante" id="ventana-flotante">
+                            <h2 class="par">Sinopsis</h2>
+                            <p class="par">El primer beso de Elle marca el inicio de un romance prohibido con el chico más lindo de la escuela, pero también podría ser el fin de su relación con su mejor amigo.</p>
+                        </div>
+                    </div>
+                </div>  
+                <div class="Pcaj" category="suspenso">
+                    <div class="contenedor-imagen">
+                    <img src="./imgP/vertigo.jpg" alt="Imagen 1" class="imagen-hover">
+                    <p class="sip">Spotlight on Education Fall ‧ suspenso/fantasia</p>
+                    <button class="modal-button" data-modal="modal18">Mas+</button>
+                    <div class="modal-container" id="modal18">
+                        <div class="modal-content">
+                        <div class="mi">
+                            <p>Cincuenta sombras es una serie de películas de drama romántico-erótico, basadas en la trilogía Cincuenta sombras de Grey de la autora inglesa E. L. James. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus tenetur sunt</p>
+                        </div>
+                        <iframe width="3000" height="350" src="https://www.youtube.com/embed/uMOMds9WDWM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                        <div class="ventana-flotante" id="ventana-flotante">
+                            <h2 class="par">Sinopsis</h2>
+                            <p class="par">Becky y Hunter, dos amigas aficionadas al alpinismo, quedan atrapadas en la torre de telecomunicaciones de la cima de una montaña que acaban de escalar. Sin provisiones y afectadas por el vértigo, comienza la lucha por la supervivencia</p>
+                        </div>
+                    </div>
+                </div>   
+                <div class="Pcaj" category="accion">
+                    <div class="contenedor-imagen">
+                    <img src="./imgP/intrusion2.jpg" alt="Imagen 1" class="imagen-hover">
+                    <p class="sip">intrusion‧ suspenso/fantasia</p>
+                    <button class="modal-button" data-modal="modal19">Mas+</button>
+                    <div class="modal-container" id="modal19">
+                        <div class="modal-content">
+                        <div class="mi">
+                            <p>Cincuenta sombras es una serie de películas de drama romántico-erótico, basadas en la trilogía Cincuenta sombras de Grey de la autora inglesa E. L. James. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus tenetur sunt alias recusandae velit laboriosam, nobis cumque perspiciatis aliquam tempore odit. Ipsam, ullam fugit ipsum maxime ex commodi quo laboriosam?</p>
+                        </div>
+                        <iframe width="3000" height="350" src="https://www.youtube.com/embed/DTUsaltziFA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                        <div class="ventana-flotante" id="ventana-flotante">
+                            <h2 class="par">Sinopsis</h2>
+                            <p class="par">Tras sufrir una invasión de su casa con un trágico desenlace, una mujer conmocionada busca respuestas y descubre que la verdadera pesadilla no ha hecho </p>
+                        </div>
+                    </div>
+                </div>   
+                <div class="Pcaj" category="accion">
+                    <div class="contenedor-imagen">
+                    <img src="./imgP/scarface.jpg" alt="Imagen 1" class="imagen-hover">
+                    <p class="sip">sacarface‧ Accion/Aventura</p>
+                    <button class="modal-button" data-modal="modal20">Mas+</button>
+                    <div class="modal-container" id="modal20">
+                        <div class="modal-content">
+                        <div class="mi">
+                            <p>Cincuenta es una serie de películas de drama romántico-erótico, basadas en la trilogía Cincuenta sombras de Grey de la autora inglesa E. L. James. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus tenetur sunt alias recusandae velit laboriosam, nobis cumque perspiciatis aliquam tempore odit. Ipsam, ullam fugit ipsum maxime ex commodi quo laboriosam?</p>
+                        </div>
+                        <iframe width="3000" height="350" src="https://www.youtube.com/embed/vSp_kLkNdnE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                        <div class="ventana-flotante" id="ventana-flotante">
+                            <h2 class="par">Sinopsis</h2>
+                            <p class="par">Un inmigrante cubano de las cárceles de Fidel Castro provoca un camino de destrucción en su ascenso en el mundo de las drogas de Miami.</p>
+                        </div>
+                    </div>
+                </div>   
+                <div class="Pcaj" category="accion">
+                    <div class="contenedor-imagen">
+                    <img src="./imgP/eltrasportador.jpg" alt="Imagen 1" class="imagen-hover">
+                    <p class="sip">El trasportador   ‧ Accion/Aventura</p>
+                    <button class="modal-button" data-modal="modal21">Mas+</button>
+                    <div class="modal-container" id="modal21">
+                        <div class="modal-content">
+                        <div class="mi">
+                            <p>Cincuenta sombras es una serie de películas de drama romántico-erótico, basadas en la trilogía Cincuenta sombras de Grey de la autora inglesa E. L. James. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus tenetur sunt alias recusandae velit laboriosam, nobis cumque perspiciatis aliquam tempore odit. Ipsam, ullam fugit ipsum maxime ex commodi quo laboriosam?</p>
+                        </div>
+                        <iframe width="3000" height="350" src="https://www.youtube.com/embed/_KFOYFBh2QM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                        <div class="ventana-flotante" id="ventana-flotante">
+                            <h2 class="par">Sinopsis</h2>
+                            <p class="par">El exmilitar Frank Martin vive lo que parece ser una vida tranquila, prestando sus servicios como transportador, pero cuando rompe las tres reglas de conducta </p>
+                        </div>
+                    </div>
+                </div>   
+                <div class="Pcaj" category="accion">
+                    <div class="contenedor-imagen">
+                    <img src="./imgP/furiosos.jpg" alt="Imagen 1" class="imagen-hover">
+                    <p class="sip">Rapidos y furiosos 9   ‧ Accion/Aventura</p>
+                    <button class="modal-button" data-modal="modal22">Mas+</button>
+                    <div class="modal-container" id="modal22">
+                        <div class="modal-content">
+                        <div class="mi">
+                            <p>Cincuenta sombras es una serie de películas de drama romántico-erótico, basadas en la trilogía Cincuenta sombras de Grey de la autora inglesa E. L. James. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus tenetur sunt alias recusandae velit laboriosam, nobis cumque perspiciatis aliquam tempore odit. Ipsam, ullam fugit ipsum maxime ex commodi quo laboriosam?</p>
+                        </div>
+                        <iframe width="3000" height="350" src="https://www.youtube.com/embed/3YNwcdVkpZQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                        <div class="ventana-flotante" id="ventana-flotante">
+                            <h2 class="par">Sinopsis</h2>
+                            <p class="par">Dom Toretto vive una vida tranquila junto a Letty y su hijo, pero el peligro siempre regresa a su vida. En esta ocasión, el equipo se enfrenta a un complot mundial orquestado por</p>
+                        </div>
+                    </div>
+                </div>   
+                <div class="Pcaj" category="comedia">
+                    <div class="contenedor-imagen">
+                    <img src="./imgP/rubias.jpg" alt="Imagen 1" class="imagen-hover">
+                    <p class="sip">donde estan las rubias   ‧ Comedia/Aventura</p>
+                    <button class="modal-button" data-modal="modal23">Mas+</button>
+                    <div class="modal-container" id="modal23">
+                        <div class="modal-content">
+                        <div class="mi">
+                            <p>Cincuenta sombras es una serie de películas de drama romántico-erótico, basadas en la trilogía Cincuenta sombras de Grey de la autora inglesa E. L. James. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus tenetur sunt alias recusandae velit laboriosam, nobis cumque perspiciatis aliquam tempore odit. Ipsam, ullam fugit ipsum maxime ex commodi quo laboriosam?</p>
+                        </div>
+                        <iframe width="3000" height="350" src="https://www.youtube.com/embed/aeVkbNka9HM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                        <div class="ventana-flotante" id="ventana-flotante">
+                            <h2 class="par">Sinopsis</h2>
+                            <p class="par">Dos torpes agentes del FBI se hacen pasar por dos chicas de la alta sociedad para investigar una serie de secuestros. No obstante, mientras preparan su plan, descubren que</p>
+                        </div>
+                    </div>
+                </div>  
+                <div class="Pcaj" category="comedia">
+                    <div class="contenedor-imagen">
+                    <img src="./imgP/la_mascara.jpg" alt="Imagen 1" class="imagen-hover">
+                    <p class="sip">la mascara   ‧ Comedia/Aventura</p>
+                    <button class="modal-button" data-modal="modal24">Mas+</button>
+                    <div class="modal-container" id="modal24">
+                        <div class="modal-content">
+                        <div class="mi">
+                            <p>Cincuenta sombras es una serie de películas de drama romántico-erótico, basadas en la trilogía Cincuenta sombras de Grey de la autora inglesa E. L. James. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus tenetur sunt alias recusandae velit laboriosam, nobis cumque perspiciatis aliquam tempore odit. Ipsam, ullam fugit ipsum maxime ex commodi quo laboriosam?</p>
+                        </div>
+                        <iframe width="3000" height="350" src="https://www.youtube.com/embed/3g7fbQHkYI0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                        <div class="ventana-flotante" id="ventana-flotante">
+                            <h2 class="par">Sinopsis</h2>
+                            <p class="par">Una máscara antigua transforma a un monótono empleado bancario en un Romeo sonriente con poderes sobrehumanos.</p>
+                        </div>
+                    </div>
+                </div>       
+            </div> 
+    <section>
+        <script src="flo.js"></script>     
+    </section>
+</body>
+</html>
